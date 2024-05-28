@@ -1,0 +1,57 @@
+[gd_scene load_steps=8 format=3 uid="uid://vhbey850e4bq"]
+
+[ext_resource type="PackedScene" uid="uid://6yuy8euk5yw4" path="res://scenes/levels/level_parent.tscn" id="1_uhs13"]
+[ext_resource type="Script" path="res://scenes/levels/office.gd" id="2_gx3uh"]
+[ext_resource type="Texture2D" uid="uid://beku8db1skhdb" path="res://graphics/levels/office/joergens-kontor-tom.png" id="3_ncswa"]
+[ext_resource type="PackedScene" uid="uid://culmdc4i14jl4" path="res://scenes/objects/office/computer_table.tscn" id="4_sjax2"]
+[ext_resource type="PackedScene" uid="uid://dfqmivt2uj10" path="res://scenes/ui/dialog.tscn" id="5_asbal"]
+[ext_resource type="PackedScene" uid="uid://8wo0d8m2ppcc" path="res://scenes/ui/dialog_area.tscn" id="6_cu5kr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wjfo1"]
+size = Vector2(615.395, 534.09)
+
+[node name="Office" instance=ExtResource("1_uhs13")]
+script = ExtResource("2_gx3uh")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." index="0"]
+
+[node name="Background" type="Sprite2D" parent="StaticBody2D" index="0"]
+position = Vector2(960, 540)
+texture = ExtResource("3_ncswa")
+
+[node name="Wall" type="CollisionPolygon2D" parent="StaticBody2D" index="1"]
+polygon = PackedVector2Array(1920, 788, 819, 591, 6, 1080, 0, 1, 1920, 5)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" index="2"]
+polygon = PackedVector2Array(66, 1068, 1500, 1067, 1506, 936, 1611, 960, 1811, 1018, 1871, 760, 1937, 706, 1955, 1144, -29, 1129, -43, 1058)
+
+[node name="Floor" type="StaticBody2D" parent="StaticBody2D" index="3"]
+input_pickable = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D/Floor" index="0"]
+polygon = PackedVector2Array(11, 1086, 817, 593, 1729, 749, 1907, 768, 1923, 810, 1935, 1079, 1494, 1060)
+one_way_collision = true
+
+[node name="Player" parent="." index="1"]
+position = Vector2(1506, 744)
+
+[node name="ComputerTable" parent="." index="2" instance=ExtResource("4_sjax2")]
+process_mode = 1
+position = Vector2(1492, 706)
+dialogue_key = "computer"
+
+[node name="Dialog" parent="." index="3" instance=ExtResource("5_asbal")]
+process_mode = 2
+scene_text_file = "res://assets/json/office/object_dialog.json"
+
+[node name="DialogAreaComputer" parent="." index="4" instance=ExtResource("6_cu5kr")]
+
+[node name="CollisionShape2D" parent="DialogAreaComputer" index="0"]
+position = Vector2(1776.85, 979.577)
+rotation = 0.747335
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_wjfo1")
+
+[connection signal="input_event" from="StaticBody2D/Floor" to="." method="_on_floor_input_event"]
+
+[editable path="DialogAreaComputer"]
