@@ -22,18 +22,29 @@ func load_scene_text():
 func show_text():
 	dialogue_text.text = selected_text.pop_front()
 
-func next_line():
-	if selected_text.size() > 0:
-		show_text()
-	else:
-		scene_text = load_scene_text()
-		finish()
+# We don't really need this right now, but maybe for a monologue?
+#func next_line():
+	#if selected_text.size() > 0:
+		#show_text()
+		#finish()
+	#else:
+		#scene_text = load_scene_text()
+		#finish()
 
 func finish():
 	dialogue_text.text = ""
 	background.visible = false
 	in_progress = false
+	if selected_text.size() == 0:
+		scene_text = load_scene_text()
 	get_tree().paused = false
+
+# We don't really need this right now, but maybe for a monologue?
+#func finish():
+	#dialogue_text.text = ""
+	#background.visible = false
+	#in_progress = false
+	#get_tree().paused = false
 
 func display_dialogue(text_key):
 	Signalbus.emit_signal("player_stop")
@@ -44,4 +55,4 @@ func display_dialogue(text_key):
 	show_text()
 
 func _on_button_pressed():
-	next_line()
+	finish()

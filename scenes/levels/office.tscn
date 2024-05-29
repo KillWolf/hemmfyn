@@ -29,7 +29,7 @@ polygon = PackedVector2Array(66, 1068, 1500, 1067, 1506, 936, 1611, 960, 1811, 1
 input_pickable = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D/Floor" index="0"]
-polygon = PackedVector2Array(11, 1086, 817, 593, 1729, 749, 1907, 768, 1923, 810, 1935, 1079, 1494, 1060)
+polygon = PackedVector2Array(11, 1086, 817, 593, 1729, 749, 1682, 831, 1494, 1060)
 one_way_collision = true
 
 [node name="Player" parent="." index="1"]
@@ -49,7 +49,6 @@ scene_text_file = "res://assets/json/office/object_dialog.json"
 [node name="CollisionShape2D" parent="DialogAreaComputer" index="0"]
 position = Vector2(1776.85, 979.577)
 rotation = 0.747335
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_wjfo1")
 
 [connection signal="input_event" from="StaticBody2D/Floor" to="." method="_on_floor_input_event"]
