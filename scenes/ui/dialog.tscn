@@ -21,6 +21,7 @@ texture = SubResource("GradientTexture1D_dlejw")
 [node name="DialogueText" type="Label" parent="Background"]
 light_mask = 0
 visibility_layer = 2
+layout_mode = 0
 offset_left = 60.0
 offset_top = 41.0
 offset_right = 1861.0
@@ -29,11 +30,12 @@ theme_override_font_sizes/font_size = 49
 autowrap_mode = 3
 
 [node name="Button" type="Button" parent="Background"]
+layout_mode = 0
 offset_left = 1784.0
 offset_top = 221.0
 offset_right = 1870.0
 offset_bottom = 264.0
 theme_override_font_sizes/font_size = 25
-text = "Næste"
+text = "Luk"
 
 [connection signal="pressed" from="Background/Button" to="." method="_on_button_pressed"]
