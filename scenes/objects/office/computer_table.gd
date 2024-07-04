@@ -5,10 +5,10 @@ extends StaticBody2D
 var area_active: bool = false
 var mouse_entered_object: bool = false
 
-signal computer_was_clicked
-
 func _ready():
 	Signalbus.connect('can_hover', enable_hover)
+	# This might be used?
+	#Signalbus.connect('object_was_clicked', )
 
 func _on_mouse_entered():
 	mouse_entered_object = true
@@ -18,7 +18,7 @@ func _on_mouse_exited():
 
 func enable_hover(bool_key):
 	area_active = bool_key
-	
+
 func _on_input_event(_viewport, event, _shape_idx):
 	if area_active && event.is_action_pressed("left_click"):
 		Signalbus.emit_signal("display_dialogue", dialogue_key)

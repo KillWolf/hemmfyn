@@ -18,7 +18,7 @@ func _ready():
 func load_scene_text():
 	var file = FileAccess.get_file_as_string(scene_text_file)
 	return JSON.parse_string(file)
-	
+
 func show_text():
 	dialogue_text.text = selected_text.pop_front()
 

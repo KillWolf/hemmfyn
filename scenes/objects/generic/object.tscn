@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://c6c52ptfmuek6"]
+
+[ext_resource type="Script" path="res://scenes/objects/generic/object.gd" id="1_al40u"]
+[ext_resource type="PackedScene" uid="uid://8wo0d8m2ppcc" path="res://scenes/ui/dialog_area.tscn" id="2_rdhsq"]
+
+[node name="ObjectContainer" type="Node2D"]
+
+[node name="Object" type="StaticBody2D" parent="."]
+input_pickable = true
+script = ExtResource("1_al40u")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Object"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Object"]
+
+[node name="DialogArea" parent="." instance=ExtResource("2_rdhsq")]
+visible = false
+
+[connection signal="mouse_entered" from="Object" to="Object" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Object" to="Object" method="_on_mouse_exited"]
+[connection signal="body_entered" from="DialogArea" to="DialogArea" method="_on_body_entered"]
+[connection signal="body_exited" from="DialogArea" to="DialogArea" method="_on_body_exited"]
+
+[editable path="DialogArea"]

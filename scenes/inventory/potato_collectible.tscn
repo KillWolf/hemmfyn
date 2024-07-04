@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://5omj5vg27jtk"]
+
+[ext_resource type="Script" path="res://scenes/inventory/potato_collectible.gd" id="1_ymghi"]
+[ext_resource type="Texture2D" uid="uid://dxrrk7raglyt" path="res://graphics/inventory_items/potato.png" id="2_c2jjd"]
+[ext_resource type="Resource" uid="uid://dnbssv1q7b8kt" path="res://inventory/items/potato.tres" id="2_ndw1i"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_b3gmo"]
+radius = 26.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_v1qgr"]
+radius = 208.06
+
+[node name="potato_collectible" type="Node2D"]
+script = ExtResource("1_ymghi")
+item = ExtResource("2_ndw1i")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -21.0
+offset_top = -16.0
+offset_bottom = 1.0
+scale = Vector2(2, 2)
+texture = ExtResource("2_c2jjd")
+
+[node name="interactable_area" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interactable_area"]
+shape = SubResource("CircleShape2D_b3gmo")
+
+[node name="area_entered" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="area_entered"]
+shape = SubResource("CircleShape2D_v1qgr")
+
+[connection signal="input_event" from="interactable_area" to="." method="_on_area_2d_input_event"]
+[connection signal="mouse_entered" from="interactable_area" to="." method="_on_interactable_area_mouse_entered"]
+[connection signal="mouse_exited" from="interactable_area" to="." method="_on_interactable_area_mouse_exited"]
+[connection signal="body_entered" from="area_entered" to="." method="_on_area_entered_body_entered"]
+[connection signal="body_exited" from="area_entered" to="." method="_on_area_entered_body_exited"]
