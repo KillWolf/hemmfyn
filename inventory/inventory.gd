@@ -2,12 +2,29 @@ extends Resource
 
 class_name Inventory
 
-signal update
-
-@export var slots: Array[InventorySlot]
+@export var items: Array[InventoryItem]
 
 func insert(item: InventoryItem):
-	var emptyslots = slots.filter(func(slot): return slot.item == null)
-	if !emptyslots.is_empty():
-		emptyslots[0].item = item
-	update.emit()
+	# Find the first null value in the items array and insert item.
+	var empty_slot: int = items.find(null)
+
+	if empty_slot == -1:
+		print("Too many items to find in the inventory. This should never happen")
+
+	items[empty_slot] = item
+	Signalbus.updated.emit()
+
+func removeItemAtIndex(index: int):
+	# Should this be InventoryItem.new?
+	items[index] = null
+
+	Signalbus.updated.emit()
+
+func insertSlot(index: int, inventoryItem: InventoryItem):
+	var oldIndex: int = items.find(inventoryItem)
+	removeItemAtIndex(oldIndex)
+
+	items[index] = inventoryItem
+
+	Signalbus.updated.emit()
+

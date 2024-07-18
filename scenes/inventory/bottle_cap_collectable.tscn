@@ -1,8 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://5omj5vg27jtk"]
+[gd_scene load_steps=6 format=3 uid="uid://ylapla2dmcm1"]
 
-[ext_resource type="Script" path="res://scenes/inventory/potato_collectible.gd" id="1_ymghi"]
-[ext_resource type="Resource" uid="uid://cde1uh3lv42ll" path="res://inventory/items/potato.tres" id="2_4y8hv"]
-[ext_resource type="Texture2D" uid="uid://dxrrk7raglyt" path="res://graphics/inventory_items/potato.png" id="2_c2jjd"]
+[ext_resource type="Script" path="res://scenes/inventory/bottle_cap_collectable.gd" id="1_dxxgp"]
+[ext_resource type="Texture2D" uid="uid://b5w3dj2ngy6ba" path="res://graphics/inventory_items/bottle-cap.png" id="2_at8o8"]
+[ext_resource type="Resource" uid="uid://dldrvojmn1k2a" path="res://inventory/items/bottle_cap.tres" id="2_ergjd"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_b3gmo"]
 radius = 26.0
@@ -10,16 +10,16 @@ radius = 26.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_v1qgr"]
 radius = 208.06
 
-[node name="potato_collectible" type="Node2D"]
-script = ExtResource("1_ymghi")
-item = ExtResource("2_4y8hv")
+[node name="bottle_cap_collectible" type="Node2D"]
+script = ExtResource("1_dxxgp")
+item = ExtResource("2_ergjd")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_left = -21.0
 offset_top = -16.0
 offset_bottom = 1.0
 scale = Vector2(2, 2)
-texture = ExtResource("2_c2jjd")
+texture = ExtResource("2_at8o8")
 
 [node name="interactable_area" type="Area2D" parent="."]
 

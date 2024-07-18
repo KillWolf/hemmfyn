@@ -1,0 +1,28 @@
+[gd_scene load_steps=2 format=3 uid="uid://beek14dpi40in"]
+
+[ext_resource type="Script" path="res://inventory/slot_gui.gd" id="1_aac5t"]
+
+[node name="Slot" type="Button"]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(180, 180)
+anchors_preset = -1
+anchor_right = 0.094
+anchor_bottom = 0.167
+offset_right = -0.480008
+offset_bottom = -0.360011
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_aac5t")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(180, 180)
+layout_mode = 0
+offset_right = 180.0
+offset_bottom = 180.0
+color = Color(0, 0, 0, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+custom_minimum_size = Vector2(180, 180)
+layout_mode = 0
+offset_right = 180.0
+offset_bottom = 180.0
