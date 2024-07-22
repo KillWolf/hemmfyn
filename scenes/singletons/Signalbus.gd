@@ -14,3 +14,5 @@ signal player_stop()
 # Inventory
 signal collect_item(item: InventoryItem)
 signal updated
+signal update_item_in_hand
+signal transform_item_in_hand

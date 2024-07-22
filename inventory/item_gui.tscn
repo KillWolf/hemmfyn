@@ -1,9 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://bau7i7be01kjn"]
+[gd_scene load_steps=3 format=3 uid="uid://bau7i7be01kjn"]
 
 [ext_resource type="Script" path="res://inventory/item_gui.gd" id="1_ictag"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ky648"]
 
 [node name="Panel" type="Panel"]
 script = ExtResource("1_ictag")
 
 [node name="item" type="Sprite2D" parent="."]
 scale = Vector2(3, 3)
+
+[node name="InventoryItem" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InventoryItem"]
+shape = SubResource("CircleShape2D_ky648")

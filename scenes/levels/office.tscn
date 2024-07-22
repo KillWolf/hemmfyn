@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://vhbey850e4bq"]
+[gd_scene load_steps=16 format=3 uid="uid://vhbey850e4bq"]
 
 [ext_resource type="PackedScene" uid="uid://6yuy8euk5yw4" path="res://scenes/levels/level_parent.tscn" id="1_uhs13"]
 [ext_resource type="Script" path="res://scenes/levels/office.gd" id="2_gx3uh"]
@@ -11,7 +11,6 @@
 [ext_resource type="Texture2D" uid="uid://b30o6cfukruwq" path="res://graphics/objects/office/computer_bord.png" id="8_k6sci"]
 [ext_resource type="PackedScene" uid="uid://5omj5vg27jtk" path="res://scenes/inventory/potato_collectible.tscn" id="10_80crt"]
 [ext_resource type="Texture2D" uid="uid://bit3gkmqwxgj8" path="res://graphics/objects/office/door.png" id="11_esb7t"]
-[ext_resource type="Resource" uid="uid://cde1uh3lv42ll" path="res://inventory/items/potato.tres" id="12_nrp1b"]
 [ext_resource type="PackedScene" uid="uid://ylapla2dmcm1" path="res://scenes/inventory/bottle_cap_collectable.tscn" id="13_x5hp5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1asxx"]
@@ -21,9 +20,9 @@ size = Vector2(577, 486)
 size = Vector2(543, 375)
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_xeby8"]
-vertices = PackedVector2Array(1644, 835, 1481, 919, 795, 1066, 361, 1080, 636, 871, 935, 719, 1342, 743, 1677, 781, 634, 860, 495, 811, 644, 717, 1488, 1062, 758, 645, 826, 603, 916, 622)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4, 5, 6, 7), PackedInt32Array(8, 9, 10, 5), PackedInt32Array(1, 11, 2), PackedInt32Array(5, 4, 8), PackedInt32Array(5, 10, 12, 13, 14)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(753, 637, 825, 593, 925, 614, 943.021, 709.311, 1343, 733, 1694, 773, 1652, 843, 1491, 925, 1499, 1072, 795, 1076, 331, 1092, 625, 867, 474, 814, 639, 709)])
+vertices = PackedVector2Array(795, 1066, 361, 1080, 636, 871, 935, 722, 1046, 683, 1341, 743, 634, 860, 495, 811, 644, 717, 1342, 743, 1677, 781, 1644, 835, 1481, 919, 1488, 1062, 758, 645, 826, 603, 916, 622)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4, 5), PackedInt32Array(6, 7, 8, 3), PackedInt32Array(9, 10, 11, 12, 0, 5), PackedInt32Array(12, 13, 0), PackedInt32Array(3, 2, 6), PackedInt32Array(3, 8, 14, 15, 16)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(753, 637, 825, 593, 925, 614, 943.021, 709.311, 1047, 673, 1343, 733, 1694, 773, 1652, 843, 1491, 925, 1499, 1072, 795, 1076, 331, 1092, 625, 867, 474, 814, 639, 709)])
 source_geometry_group_name = &"navigation_polygon_source_group"
 
 [node name="Office" instance=ExtResource("1_uhs13")]
@@ -47,7 +46,7 @@ polygon = PackedVector2Array(66, 1068, 1500, 1067, 1506, 936, 1611, 960, 1811, 1
 [node name="Floor" type="Area2D" parent="Boundaries" index="3"]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Boundaries/Floor" index="0"]
-polygon = PackedVector2Array(475, 817, 627, 717, 823, 593, 916, 625, 939, 716, 1343, 745, 1680, 789, 1488, 937, 1494, 1060, 377, 1077, 639, 864)
+polygon = PackedVector2Array(475, 817, 627, 717, 823, 593, 916, 625, 939, 716, 1043, 671, 1353, 731, 1680, 789, 1488, 937, 1494, 1060, 377, 1077, 639, 864)
 one_way_collision = true
 
 [node name="RightSideBed" type="Node2D" parent="." index="1"]
@@ -101,7 +100,6 @@ polygon = PackedVector2Array(584, 730, 580, 357, 747, 309, 747, 626)
 
 [node name="potato_collectible" parent="." index="4" instance=ExtResource("10_80crt")]
 position = Vector2(1146, 631)
-item = ExtResource("12_nrp1b")
 
 [node name="Player" parent="." index="5"]
 position = Vector2(1265, 789)

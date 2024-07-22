@@ -1,10 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://d4intpnsgsfx0"]
+[gd_scene load_steps=5 format=3 uid="uid://d4intpnsgsfx0"]
 
 [ext_resource type="Texture2D" uid="uid://b2w5dsj8yran" path="res://graphics/joergen.png" id="1_giihi"]
 [ext_resource type="Script" path="res://scenes/player/player.gd" id="1_x5v0e"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6uidb"]
 size = Vector2(12.75, 14.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i80ja"]
+size = Vector2(140, 240)
 
 [node name="Player" type="CharacterBody2D"]
 position = Vector2(53, 60)
@@ -24,3 +27,16 @@ texture = ExtResource("1_giihi")
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
 path_desired_distance = 10.0
 path_max_distance = 10.0
+
+[node name="inventory_interaction_area" type="Area2D" parent="."]
+position = Vector2(-2, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="inventory_interaction_area"]
+position = Vector2(-21, -87)
+shape = SubResource("RectangleShape2D_i80ja")
+
+[connection signal="area_entered" from="inventory_interaction_area" to="." method="_on_inventory_interaction_area_area_entered"]
+[connection signal="area_exited" from="inventory_interaction_area" to="." method="_on_inventory_interaction_area_area_exited"]
+[connection signal="body_entered" from="inventory_interaction_area" to="inventory_interaction_area" method="_on_body_entered"]
+[connection signal="body_exited" from="inventory_interaction_area" to="inventory_interaction_area" method="_on_body_exited"]
+[connection signal="input_event" from="inventory_interaction_area" to="." method="_on_inventory_interaction_area_input_event"]
