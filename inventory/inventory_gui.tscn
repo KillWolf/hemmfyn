@@ -1,7 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://dehqtge77ghtw"]
+[gd_scene load_steps=5 format=3 uid="uid://dehqtge77ghtw"]
 
 [ext_resource type="PackedScene" uid="uid://beek14dpi40in" path="res://inventory/slot_gui.tscn" id="1_0365f"]
 [ext_resource type="Script" path="res://inventory/inventory_gui.gd" id="1_hie6x"]
+
+[sub_resource type="Animation" id="Animation_h5iay"]
+resource_name = "toggle"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_buu6f"]
+_data = {
+"toggle": SubResource("Animation_h5iay")
+}
 
 [node name="InventoryGui" type="Control"]
 custom_minimum_size = Vector2(1920, 200)
@@ -64,6 +72,11 @@ layout_mode = 2
 
 [node name="Slot10" parent="ColorRect/GridContainer" instance=ExtResource("1_0365f")]
 layout_mode = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ColorRect"]
+libraries = {
+"": SubResource("AnimationLibrary_buu6f")
+}
 
 [node name="NinePatchRect(Maybeneeded)" type="NinePatchRect" parent="."]
 visible = false

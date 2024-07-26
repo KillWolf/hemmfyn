@@ -13,6 +13,7 @@ func _ready():
 	Signalbus.collect_item.connect(collect_item)
 	Signalbus.updated.connect(update)
 	Signalbus.transform_item_in_hand.connect(transformItemInHand)
+	Signalbus.toggle_inventory.connect(open)
 	update()
 
 func connectSlots():
@@ -53,15 +54,21 @@ func close():
 		isOpen = false
 
 func transformItemInHand():
+	# Using JSON to look up the correct name programatically
+	var lookup = load_lookup_json()
+	# Let's gracefully return if lookup_object was not found
+	if !lookup.has(itemInHand.inventoryItem.name): return
+
 	# Removing the items to make room for the transformed object
 	inventory.removeItemAtIndex(inventory.items.find(itemInHand.inventoryItem))
 	remove_child(itemInHand)
 
+	# This is for the tutorial
+
+
 	# Creating the inventoryItem
 	var new_inventory_item = InventoryItem.new()
 
-	# Using JSON to look up the correct name programatically
-	var lookup = load_lookup_json()
 	new_inventory_item.name = lookup[itemInHand.inventoryItem.name]["name"]
 	var texture = load("res://graphics/inventory_items/" + lookup[itemInHand.inventoryItem.name]["image"])
 	new_inventory_item.texture = texture

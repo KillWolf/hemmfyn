@@ -16,3 +16,8 @@ signal collect_item(item: InventoryItem)
 signal updated
 signal update_item_in_hand
 signal transform_item_in_hand
+# # This signal is only used for the tutorial
+signal toggle_inventory
+
+# Office tutorial
+signal tutorial

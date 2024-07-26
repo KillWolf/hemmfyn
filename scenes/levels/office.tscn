@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://vhbey850e4bq"]
+[gd_scene load_steps=17 format=3 uid="uid://vhbey850e4bq"]
 
 [ext_resource type="PackedScene" uid="uid://6yuy8euk5yw4" path="res://scenes/levels/level_parent.tscn" id="1_uhs13"]
 [ext_resource type="Script" path="res://scenes/levels/office.gd" id="2_gx3uh"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://b30o6cfukruwq" path="res://graphics/objects/office/computer_bord.png" id="8_k6sci"]
 [ext_resource type="PackedScene" uid="uid://5omj5vg27jtk" path="res://scenes/inventory/potato_collectible.tscn" id="10_80crt"]
 [ext_resource type="Texture2D" uid="uid://bit3gkmqwxgj8" path="res://graphics/objects/office/door.png" id="11_esb7t"]
+[ext_resource type="PackedScene" uid="uid://cfefdry52yoma" path="res://tutorials/inventory/inventory_tutorial.tscn" id="13_3sccn"]
 [ext_resource type="PackedScene" uid="uid://ylapla2dmcm1" path="res://scenes/inventory/bottle_cap_collectable.tscn" id="13_x5hp5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1asxx"]
@@ -80,7 +81,6 @@ texture = ExtResource("5_xy563")
 [node name="Area2D" type="Area2D" parent="Skab" index="2"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Skab/Area2D" index="0"]
-visible = false
 position = Vector2(9, 59)
 shape = SubResource("RectangleShape2D_1asxx")
 
@@ -136,6 +136,8 @@ position = Vector2(1585, 922)
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." index="9"]
 navigation_polygon = SubResource("NavigationPolygon_xeby8")
+
+[node name="InventoryTutorial" parent="CanvasLayer" index="1" instance=ExtResource("13_3sccn")]
 
 [connection signal="input_event" from="Boundaries/Floor" to="." method="_on_floor_input_event"]
 [connection signal="mouse_entered" from="Skab/SkabObject" to="Skab/SkabObject" method="_on_mouse_entered"]
