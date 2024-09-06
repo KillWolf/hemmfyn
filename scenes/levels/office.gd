@@ -3,7 +3,12 @@ extends LevelParent
 @onready var player = $Player
 
 func _ready():
+	$AnimationPlayer.play("computer_light")
+	var anim = $AnimationPlayer.get_animation("computer_light")
+	anim.loop = true
 	player.target_position = Vector2(1506, 744)
+	await get_tree().create_timer(2).timeout
+	$AnimationPlayer.play("brev")
 
 func _on_floor_input_event(_viewport, event, _shape_idx):
 	if event is InputEventMouseButton && event.is_action_pressed("left_click"):

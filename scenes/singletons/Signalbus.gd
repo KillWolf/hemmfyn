@@ -17,7 +17,8 @@ signal updated
 signal update_item_in_hand
 signal transform_item_in_hand
 # # This signal is only used for the tutorial
-signal toggle_inventory
+signal open_inventory
 
 # Office tutorial
-signal tutorial
+signal tutorial_started
+signal tutorial_ended

@@ -1,18 +1,40 @@
-[gd_scene load_steps=17 format=3 uid="uid://vhbey850e4bq"]
+[gd_scene load_steps=39 format=3 uid="uid://vhbey850e4bq"]
 
 [ext_resource type="PackedScene" uid="uid://6yuy8euk5yw4" path="res://scenes/levels/level_parent.tscn" id="1_uhs13"]
 [ext_resource type="Script" path="res://scenes/levels/office.gd" id="2_gx3uh"]
-[ext_resource type="Texture2D" uid="uid://beku8db1skhdb" path="res://graphics/levels/office/joergens-kontor-tom.png" id="3_ncswa"]
+[ext_resource type="Texture2D" uid="uid://dm7xu1j3ny4cm" path="res://graphics/objects/office/kontor.png" id="3_x5hlj"]
 [ext_resource type="Texture2D" uid="uid://oh60lhutlerq" path="res://graphics/objects/office/rightside-bed.png" id="4_0v4y0"]
+[ext_resource type="Texture2D" uid="uid://x57vre04j2pp" path="res://graphics/objects/office/claypot_plants.png" id="4_gml38"]
+[ext_resource type="Texture2D" uid="uid://yf7uew7jh5ri" path="res://graphics/objects/office/closet.png" id="5_4hvhy"]
 [ext_resource type="PackedScene" uid="uid://dfqmivt2uj10" path="res://scenes/ui/dialog.tscn" id="5_asbal"]
+[ext_resource type="Texture2D" uid="uid://dyar7vhyyrtpn" path="res://graphics/objects/office/bed.png" id="5_j1xe2"]
 [ext_resource type="Texture2D" uid="uid://3ftmc08lrpre" path="res://graphics/objects/office/skab.png" id="5_xy563"]
 [ext_resource type="Script" path="res://scenes/levels/SkabObject.gd" id="6_lvjnb"]
+[ext_resource type="Texture2D" uid="uid://dj11f4215eb1r" path="res://graphics/objects/office/toy_ferry.png" id="7_3c2id"]
+[ext_resource type="PackedScene" uid="uid://cpatpr5k5ix3o" path="res://scenes/objects/office/letters.tscn" id="7_hja2m"]
+[ext_resource type="Texture2D" uid="uid://b2b18pt8lp0hf" path="res://graphics/objects/office/poster.png" id="8_5s016"]
 [ext_resource type="Script" path="res://scenes/levels/ComputerObject.gd" id="8_gu1xj"]
 [ext_resource type="Texture2D" uid="uid://b30o6cfukruwq" path="res://graphics/objects/office/computer_bord.png" id="8_k6sci"]
 [ext_resource type="PackedScene" uid="uid://5omj5vg27jtk" path="res://scenes/inventory/potato_collectible.tscn" id="10_80crt"]
-[ext_resource type="Texture2D" uid="uid://bit3gkmqwxgj8" path="res://graphics/objects/office/door.png" id="11_esb7t"]
+[ext_resource type="Texture2D" uid="uid://b6b5nduofgdu0" path="res://graphics/objects/office/door.png" id="11_esb7t"]
+[ext_resource type="Texture2D" uid="uid://8j2g8d2p12t" path="res://graphics/objects/office/desk.png" id="11_jee8o"]
+[ext_resource type="Texture2D" uid="uid://bit3gkmqwxgj8" path="res://graphics/objects/office/door_old.png" id="11_ssem2"]
+[ext_resource type="Texture2D" uid="uid://cwb065w2t86xg" path="res://graphics/objects/office/computer.png" id="12_28s18"]
+[ext_resource type="Texture2D" uid="uid://d26njlkrvgxne" path="res://graphics/objects/office/jola.png" id="13_0xrr5"]
 [ext_resource type="PackedScene" uid="uid://cfefdry52yoma" path="res://tutorials/inventory/inventory_tutorial.tscn" id="13_3sccn"]
 [ext_resource type="PackedScene" uid="uid://ylapla2dmcm1" path="res://scenes/inventory/bottle_cap_collectable.tscn" id="13_x5hp5"]
+[ext_resource type="PackedScene" uid="uid://dtsfg2na1cud0" path="res://scenes/inventory/office_key_collectible.tscn" id="15_df20h"]
+[ext_resource type="Resource" uid="uid://oas43kpttxnd" path="res://inventory/items/office_key.tres" id="16_bg3e0"]
+[ext_resource type="PackedScene" uid="uid://e03aogkfywgs" path="res://scenes/objects/office/door_mat.tscn" id="16_fhetb"]
+[ext_resource type="Texture2D" uid="uid://celsa2f1m60mq" path="res://graphics/objects/office/bookcase.png" id="18_tdwkx"]
+[ext_resource type="Texture2D" uid="uid://cvwndss1mi8uh" path="res://graphics/objects/office/jola_cases.png" id="19_1goag"]
+[ext_resource type="Texture2D" uid="uid://drw8t4snkptjc" path="res://graphics/objects/office/ceiling_laths.png" id="25_ntfge"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_xeby8"]
+vertices = PackedVector2Array(1575, 1049, 1608, 1062, 1499, 1062, 1207, 833, 1588, 949, 1549, 997, 795, 1066, 433, 1020, 288, 807, 372, 752, 904, 638, 1020, 681, 1021, 682, 433, 1064, 1210, 733, 369, 682, 774, 548, 858, 575, 889, 595)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2), PackedInt32Array(3, 4, 5), PackedInt32Array(3, 5, 0, 2, 6), PackedInt32Array(6, 7, 8, 9, 10, 11, 12), PackedInt32Array(6, 13, 7), PackedInt32Array(12, 14, 3, 6), PackedInt32Array(10, 9, 15, 16, 17, 18)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(861, 565, 897, 589, 912, 630, 1024, 672, 1221, 725, 1217, 826, 1606, 944, 1561, 998, 1582, 1041, 1660, 1073, 1499, 1072, 795, 1076, 424, 1074, 423, 1023, 275, 805, 362, 747, 359, 676, 776, 538)])
+source_geometry_group_name = &"navigation_polygon_source_group"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1asxx"]
 size = Vector2(577, 486)
@@ -20,37 +42,150 @@ size = Vector2(577, 486)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0l6yf"]
 size = Vector2(543, 375)
 
-[sub_resource type="NavigationPolygon" id="NavigationPolygon_xeby8"]
-vertices = PackedVector2Array(795, 1066, 361, 1080, 636, 871, 935, 722, 1046, 683, 1341, 743, 634, 860, 495, 811, 644, 717, 1342, 743, 1677, 781, 1644, 835, 1481, 919, 1488, 1062, 758, 645, 826, 603, 916, 622)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4, 5), PackedInt32Array(6, 7, 8, 3), PackedInt32Array(9, 10, 11, 12, 0, 5), PackedInt32Array(12, 13, 0), PackedInt32Array(3, 2, 6), PackedInt32Array(3, 8, 14, 15, 16)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(753, 637, 825, 593, 925, 614, 943.021, 709.311, 1047, 673, 1343, 733, 1694, 773, 1652, 843, 1491, 925, 1499, 1072, 795, 1076, 331, 1092, 625, 867, 474, 814, 639, 709)])
-source_geometry_group_name = &"navigation_polygon_source_group"
+[sub_resource type="Gradient" id="Gradient_d6lrc"]
+offsets = PackedFloat32Array(0, 0.993932)
+colors = PackedColorArray(0.803922, 1, 1, 0, 0.713726, 1, 1, 0.321569)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_ooj3x"]
+gradient = SubResource("Gradient_d6lrc")
+
+[sub_resource type="Animation" id="Animation_hrhmh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Letter:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(624, 674)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Computer light:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_idlap"]
+resource_name = "brev"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Letter:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.378929, 0.0669858),
+"update": 0,
+"values": [Vector2(624, 674), Vector2(748, 724)]
+}
+
+[sub_resource type="Animation" id="Animation_m535r"]
+resource_name = "computer_light"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Computer light:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0.121569), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yf8bq"]
+_data = {
+"RESET": SubResource("Animation_hrhmh"),
+"brev": SubResource("Animation_idlap"),
+"computer_light": SubResource("Animation_m535r")
+}
 
 [node name="Office" instance=ExtResource("1_uhs13")]
 script = ExtResource("2_gx3uh")
 
-[node name="Boundaries" type="StaticBody2D" parent="." index="0"]
+[node name="Background" type="Sprite2D" parent="." index="0"]
+position = Vector2(956, 540.5)
+texture = ExtResource("3_x5hlj")
 
-[node name="Background" type="Sprite2D" parent="Boundaries" index="0"]
-position = Vector2(960, 540)
-texture = ExtResource("3_ncswa")
-metadata/_edit_lock_ = true
+[node name="Boundaries" type="StaticBody2D" parent="." index="1"]
 
-[node name="Wall" type="CollisionPolygon2D" parent="Boundaries" index="1"]
-visible = false
-polygon = PackedVector2Array(1920, 788, 819, 591, 6, 1080, 0, 1, 1920, 5)
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Boundaries" index="2"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Boundaries" index="0"]
 visible = false
 polygon = PackedVector2Array(66, 1068, 1500, 1067, 1506, 936, 1611, 960, 1811, 1018, 1871, 760, 1937, 706, 1955, 1144, -29, 1129, -43, 1058)
 
-[node name="Floor" type="Area2D" parent="Boundaries" index="3"]
+[node name="Floor" type="Area2D" parent="Boundaries" index="1"]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Boundaries/Floor" index="0"]
-polygon = PackedVector2Array(475, 817, 627, 717, 823, 593, 916, 625, 939, 716, 1043, 671, 1353, 731, 1680, 789, 1488, 937, 1494, 1060, 377, 1077, 639, 864)
+polygon = PackedVector2Array(292, 809, 402, 765, 378, 677, 558, 616, 775, 546, 861, 572, 886, 594, 1026, 682, 1212, 737, 1207, 836, 1579, 954, 1558, 986, 1571, 1043, 1605, 1059, 1494, 1060, 430, 1063, 433, 1019)
 one_way_collision = true
 
-[node name="RightSideBed" type="Node2D" parent="." index="1"]
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="Boundaries" index="2"]
+navigation_polygon = SubResource("NavigationPolygon_xeby8")
+
+[node name="Claypots" type="Node2D" parent="." index="2"]
+
+[node name="TextureRect" type="TextureRect" parent="Claypots" index="0"]
+offset_left = -4.0
+offset_top = -3.0
+offset_right = 1916.0
+offset_bottom = 1077.0
+texture = ExtResource("4_gml38")
+
+[node name="Skab" type="Node2D" parent="." index="3"]
+position = Vector2(124, 60)
+
+[node name="TextureRect" type="TextureRect" parent="Skab" index="0"]
+offset_left = 910.0
+offset_top = 119.0
+offset_right = 1003.0
+offset_bottom = 265.0
+texture = ExtResource("5_4hvhy")
+
+[node name="Bed" type="Node2D" parent="." index="4"]
+
+[node name="TextureRect" type="TextureRect" parent="Bed" index="0"]
+offset_left = 1219.0
+offset_top = 563.0
+offset_right = 1393.0
+offset_bottom = 692.0
+texture = ExtResource("5_j1xe2")
+
+[node name="ToyFerry" type="Node2D" parent="." index="5"]
+
+[node name="TextureRect" type="TextureRect" parent="ToyFerry" index="0"]
+offset_left = 1580.0
+offset_top = 936.0
+offset_right = 1754.0
+offset_bottom = 1065.0
+texture = ExtResource("7_3c2id")
+stretch_mode = 2
+
+[node name="Poster" type="Node2D" parent="." index="6"]
+
+[node name="TextureRect" type="TextureRect" parent="Poster" index="0"]
+offset_left = 1561.0
+offset_top = 297.0
+offset_right = 1640.0
+offset_bottom = 402.0
+texture = ExtResource("8_5s016")
+
+[node name="RightSideBed" type="Node2D" parent="." index="7"]
+visible = false
 
 [node name="StaticBody2D" type="StaticBody2D" parent="RightSideBed" index="0"]
 
@@ -61,91 +196,179 @@ offset_right = 1920.0
 offset_bottom = 801.0
 texture = ExtResource("4_0v4y0")
 
-[node name="Skab" type="Node2D" parent="." index="2"]
+[node name="Skab_old" type="Node2D" parent="." index="8"]
+visible = false
 position = Vector2(1171, 543)
 
-[node name="SkabObject" type="StaticBody2D" parent="Skab" index="0"]
+[node name="SkabObject" type="StaticBody2D" parent="Skab_old" index="0"]
 input_pickable = true
 script = ExtResource("6_lvjnb")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Skab/SkabObject" index="0"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Skab_old/SkabObject" index="0"]
 polygon = PackedVector2Array(-216, -91, -112, -133, -121, -138, -122, -157, -74, -179, 218, -144, 224, 144, 178, 159, 180, 178, 153, 178, 143, 155, -71, 117, -73, 130, -97, 131, -113, 126, -109, 113, -120, 107, -224, 153)
 
-[node name="TextureRect" type="TextureRect" parent="Skab" index="1"]
+[node name="TextureRect" type="TextureRect" parent="Skab_old" index="1"]
 offset_left = -228.0
 offset_top = -177.0
 offset_right = 223.0
 offset_bottom = 184.0
 texture = ExtResource("5_xy563")
 
-[node name="Area2D" type="Area2D" parent="Skab" index="2"]
+[node name="Area2D" type="Area2D" parent="Skab_old" index="2"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Skab/Area2D" index="0"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Skab_old/Area2D" index="0"]
 position = Vector2(9, 59)
 shape = SubResource("RectangleShape2D_1asxx")
 
-[node name="Dør" type="Node2D" parent="." index="3"]
+[node name="Letter" parent="." index="9" instance=ExtResource("7_hja2m")]
+position = Vector2(624, 674)
 
-[node name="TextureRect" type="TextureRect" parent="Dør" index="0"]
+[node name="Dør" type="Node2D" parent="." index="10"]
+
+[node name="Door" type="TextureRect" parent="Dør" index="0"]
+offset_left = 311.0
+offset_top = 152.0
+offset_right = 386.0
+offset_bottom = 282.0
+texture = ExtResource("11_esb7t")
+
+[node name="office_key_collectible" parent="Dør" index="1" instance=ExtResource("15_df20h")]
+position = Vector2(540, 688)
+item = ExtResource("16_bg3e0")
+
+[node name="DoorMat" parent="Dør" index="2" instance=ExtResource("16_fhetb")]
+offset_left = 408.0
+offset_top = 609.0
+offset_right = 408.0
+offset_bottom = 609.0
+
+[node name="Dør_old" type="Node2D" parent="." index="11"]
+visible = false
+
+[node name="TextureRect" type="TextureRect" parent="Dør_old" index="0"]
 offset_left = 566.0
 offset_top = 300.0
 offset_right = 761.0
 offset_bottom = 735.0
-texture = ExtResource("11_esb7t")
+texture = ExtResource("11_ssem2")
 
-[node name="Area2D" type="Area2D" parent="Dør" index="1"]
+[node name="Area2D" type="Area2D" parent="Dør_old" index="1"]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Dør/Area2D" index="0"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Dør_old/Area2D" index="0"]
 polygon = PackedVector2Array(584, 730, 580, 357, 747, 309, 747, 626)
 
-[node name="potato_collectible" parent="." index="4" instance=ExtResource("10_80crt")]
+[node name="potato_collectible" parent="." index="12" instance=ExtResource("10_80crt")]
+visible = false
 position = Vector2(1146, 631)
 
-[node name="Player" parent="." index="5"]
-position = Vector2(1265, 789)
+[node name="Bookcase" type="Node2D" parent="." index="13"]
 
-[node name="Dialog" parent="." index="6" instance=ExtResource("5_asbal")]
+[node name="Bookcase" type="TextureRect" parent="Bookcase" index="0"]
+offset_left = -3.0
+offset_top = 169.0
+offset_right = 67.0
+offset_bottom = 335.0
+texture = ExtResource("18_tdwkx")
+
+[node name="Jolacases" type="TextureRect" parent="Bookcase" index="1"]
+offset_left = 2.0
+offset_top = 509.0
+offset_right = 254.0
+offset_bottom = 869.0
+texture = ExtResource("19_1goag")
+
+[node name="Player" parent="." index="14"]
+position = Vector2(1130, 910)
+
+[node name="Dialog" parent="." index="15" instance=ExtResource("5_asbal")]
 process_mode = 2
 visible = false
 scene_text_file = "res://assets/json/office/object_dialog.json"
 
-[node name="Computer" type="Node2D" parent="." index="7"]
+[node name="Computer" type="Node2D" parent="." index="16"]
 
-[node name="ComputerObject" type="StaticBody2D" parent="Computer" index="0"]
+[node name="Desk" type="TextureRect" parent="Computer" index="0"]
+offset_left = 41.0
+offset_top = 801.0
+offset_right = 468.0
+offset_bottom = 1176.0
+texture = ExtResource("11_jee8o")
+stretch_mode = 2
+
+[node name="Computer" type="TextureRect" parent="Computer" index="1"]
+offset_left = 32.0
+offset_top = 773.0
+offset_right = 459.0
+offset_bottom = 1148.0
+texture = ExtResource("12_28s18")
+stretch_mode = 2
+
+[node name="Jola" type="TextureRect" parent="Computer" index="2"]
+offset_left = 233.0
+offset_top = 973.0
+offset_right = 660.0
+offset_bottom = 1348.0
+texture = ExtResource("13_0xrr5")
+stretch_mode = 2
+
+[node name="Computer_old" type="Node2D" parent="." index="17"]
+visible = false
+
+[node name="ComputerObject" type="StaticBody2D" parent="Computer_old" index="0"]
 input_pickable = true
 script = ExtResource("8_gu1xj")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Computer/ComputerObject" index="0"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Computer_old/ComputerObject" index="0"]
 polygon = PackedVector2Array(1500, 941, 1687, 832, 1693, 767, 1816, 707, 1921, 730, 1922, 963, 1811, 1039, 1785, 1038, 1783, 1080, 1746, 1080, 1746, 1030, 1589, 989, 1589, 1078, 1553, 1078, 1556, 983, 1501, 968)
 
-[node name="TextureRect" type="TextureRect" parent="Computer" index="1"]
+[node name="TextureRect" type="TextureRect" parent="Computer_old" index="1"]
 offset_left = 1495.0
 offset_top = 705.0
 offset_right = 1922.0
 offset_bottom = 1080.0
 texture = ExtResource("8_k6sci")
 
-[node name="Area2D" type="Area2D" parent="Computer" index="2"]
+[node name="Area2D" type="Area2D" parent="Computer_old" index="2"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Computer/Area2D" index="0"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Computer_old/Area2D" index="0"]
 position = Vector2(1650.5, 889.5)
 shape = SubResource("RectangleShape2D_0l6yf")
 
-[node name="bottle_cap_collectible" parent="." index="8" instance=ExtResource("13_x5hp5")]
-position = Vector2(1585, 922)
+[node name="Ceiling" type="Node2D" parent="." index="18"]
 
-[node name="NavigationRegion2D" type="NavigationRegion2D" parent="." index="9"]
-navigation_polygon = SubResource("NavigationPolygon_xeby8")
+[node name="TextureRect" type="TextureRect" parent="Ceiling" index="0"]
+offset_left = -7.0
+offset_top = 3.0
+offset_right = 473.0
+offset_bottom = 43.0
+scale = Vector2(4, 1)
+texture = ExtResource("25_ntfge")
+
+[node name="Computer light" type="Polygon2D" parent="." index="19"]
+visible = false
+texture = SubResource("GradientTexture1D_ooj3x")
+texture_offset = Vector2(-1500, 2.08165e-12)
+texture_rotation = -0.481711
+polygon = PackedVector2Array(1691, 890, 1695, 771, 1820, 706, 1436, 510, 1293, 991)
+
+[node name="bottle_cap_collectible" parent="." index="20" instance=ExtResource("13_x5hp5")]
+visible = false
+position = Vector2(1585, 922)
 
 [node name="InventoryTutorial" parent="CanvasLayer" index="1" instance=ExtResource("13_3sccn")]
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="22"]
+libraries = {
+"": SubResource("AnimationLibrary_yf8bq")
+}
+
 [connection signal="input_event" from="Boundaries/Floor" to="." method="_on_floor_input_event"]
-[connection signal="mouse_entered" from="Skab/SkabObject" to="Skab/SkabObject" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="Skab/SkabObject" to="Skab/SkabObject" method="_on_mouse_exited"]
-[connection signal="body_entered" from="Skab/Area2D" to="Skab/SkabObject" method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="Skab/Area2D" to="Skab/SkabObject" method="_on_area_2d_body_exited"]
-[connection signal="input_event" from="Dør/Area2D" to="." method="_on_area_2d_input_event"]
-[connection signal="mouse_entered" from="Computer/ComputerObject" to="Computer/ComputerObject" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="Computer/ComputerObject" to="Computer/ComputerObject" method="_on_mouse_exited"]
-[connection signal="body_entered" from="Computer/Area2D" to="Computer/ComputerObject" method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="Computer/Area2D" to="Computer/ComputerObject" method="_on_area_2d_body_exited"]
+[connection signal="mouse_entered" from="Skab_old/SkabObject" to="Skab_old/SkabObject" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Skab_old/SkabObject" to="Skab_old/SkabObject" method="_on_mouse_exited"]
+[connection signal="body_entered" from="Skab_old/Area2D" to="Skab_old/SkabObject" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Skab_old/Area2D" to="Skab_old/SkabObject" method="_on_area_2d_body_exited"]
+[connection signal="input_event" from="Dør_old/Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="mouse_entered" from="Computer_old/ComputerObject" to="Computer_old/ComputerObject" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Computer_old/ComputerObject" to="Computer_old/ComputerObject" method="_on_mouse_exited"]
+[connection signal="body_entered" from="Computer_old/Area2D" to="Computer_old/ComputerObject" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Computer_old/Area2D" to="Computer_old/ComputerObject" method="_on_area_2d_body_exited"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b6b5nduofgdu0"
-path="res://.godot/imported/door.png-949c105d2fa0d4602a996ea0d5923c54.ctex"
+uid="uid://drw8t4snkptjc"
+path="res://.godot/imported/ceiling_laths.png-c8eedd603c5f74c4f1305dd386da72d8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/objects/office/door.png"
-dest_files=["res://.godot/imported/door.png-949c105d2fa0d4602a996ea0d5923c54.ctex"]
+source_file="res://graphics/objects/office/ceiling_laths.png"
+dest_files=["res://.godot/imported/ceiling_laths.png-c8eedd603c5f74c4f1305dd386da72d8.ctex"]
 
 [params]
 

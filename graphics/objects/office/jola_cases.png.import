@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b6b5nduofgdu0"
-path="res://.godot/imported/door.png-949c105d2fa0d4602a996ea0d5923c54.ctex"
+uid="uid://cvwndss1mi8uh"
+path="res://.godot/imported/jola_cases.png-76e9134228079f26302af6c28671ed83.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/objects/office/door.png"
-dest_files=["res://.godot/imported/door.png-949c105d2fa0d4602a996ea0d5923c54.ctex"]
+source_file="res://graphics/objects/office/jola_cases.png"
+dest_files=["res://.godot/imported/jola_cases.png-76e9134228079f26302af6c28671ed83.ctex"]
 
 [params]
 

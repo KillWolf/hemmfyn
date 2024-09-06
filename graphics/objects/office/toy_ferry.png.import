@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b6b5nduofgdu0"
-path="res://.godot/imported/door.png-949c105d2fa0d4602a996ea0d5923c54.ctex"
+uid="uid://dj11f4215eb1r"
+path="res://.godot/imported/toy_ferry.png-37d423c6a12a1b816739e14b297a43e2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/objects/office/door.png"
-dest_files=["res://.godot/imported/door.png-949c105d2fa0d4602a996ea0d5923c54.ctex"]
+source_file="res://graphics/objects/office/toy_ferry.png"
+dest_files=["res://.godot/imported/toy_ferry.png-37d423c6a12a1b816739e14b297a43e2.ctex"]
 
 [params]
 

@@ -8,7 +8,7 @@
 script = ExtResource("1_ictag")
 
 [node name="item" type="Sprite2D" parent="."]
-scale = Vector2(3, 3)
+scale = Vector2(2, 2)
 
 [node name="InventoryItem" type="Area2D" parent="."]
 

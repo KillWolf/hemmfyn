@@ -13,7 +13,7 @@ func _ready():
 	Signalbus.collect_item.connect(collect_item)
 	Signalbus.updated.connect(update)
 	Signalbus.transform_item_in_hand.connect(transformItemInHand)
-	Signalbus.toggle_inventory.connect(open)
+	Signalbus.open_inventory.connect(open)
 	update()
 
 func connectSlots():
@@ -64,7 +64,8 @@ func transformItemInHand():
 	remove_child(itemInHand)
 
 	# This is for the tutorial
-
+	if itemInHand.inventoryItem.name == "potato":
+		Signalbus.tutorial_ended.emit()
 
 	# Creating the inventoryItem
 	var new_inventory_item = InventoryItem.new()

@@ -1,7 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://5omj5vg27jtk"]
+[gd_scene load_steps=5 format=3 uid="uid://dtsfg2na1cud0"]
 
-[ext_resource type="Script" path="res://scenes/inventory/potato_collectible.gd" id="1_ymghi"]
-[ext_resource type="Texture2D" uid="uid://dxrrk7raglyt" path="res://graphics/inventory_items/potato.png" id="2_c2jjd"]
+[ext_resource type="Script" path="res://scenes/inventory/office_key_collectible.gd" id="1_thnt4"]
+[ext_resource type="Texture2D" uid="uid://bv8218tdcnpit" path="res://graphics/objects/office/key.png" id="3_uvgkk"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_b3gmo"]
 radius = 26.0
@@ -9,15 +9,15 @@ radius = 26.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_v1qgr"]
 radius = 208.06
 
-[node name="potato_collectible" type="Node2D"]
-script = ExtResource("1_ymghi")
+[node name="office_key_collectible" type="Node2D"]
+script = ExtResource("1_thnt4")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_left = -21.0
-offset_top = -16.0
-offset_bottom = 1.0
-scale = Vector2(2, 2)
-texture = ExtResource("2_c2jjd")
+offset_left = -22.0
+offset_top = -6.0
+offset_right = 22.0
+offset_bottom = 14.0
+texture = ExtResource("3_uvgkk")
 
 [node name="interactable_area" type="Area2D" parent="."]
 

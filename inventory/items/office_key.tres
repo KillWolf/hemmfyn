@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="InventoryItem" load_steps=3 format=3 uid="uid://oas43kpttxnd"]
+
+[ext_resource type="Script" path="res://inventory/inventory_item.gd" id="1_6bsoi"]
+[ext_resource type="Texture2D" uid="uid://bv8218tdcnpit" path="res://graphics/objects/office/key.png" id="2_2xwpb"]
+
+[resource]
+script = ExtResource("1_6bsoi")
+name = "office_key"
+texture = ExtResource("2_2xwpb")
