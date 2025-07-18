@@ -1,8 +1,39 @@
-[gd_scene load_steps=2 format=3 uid="uid://cpatpr5k5ix3o"]
+[gd_scene load_steps=5 format=3 uid="uid://cpatpr5k5ix3o"]
 
+[ext_resource type="Script" uid="uid://5bnx1x3n03x4" path="res://scenes/objects/office/letters.gd" id="1_34lnb"]
 [ext_resource type="Texture2D" uid="uid://k0hgiwsjxota" path="res://graphics/objects/office/brev.png" id="1_egdpj"]
 
-[node name="Node2D" type="Node2D"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_1b7sg"]
+radius = 140.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qxojq"]
+radius = 18.9023
+height = 74.8736
+
+[node name="Letter" type="Node2D"]
+position = Vector2(284, 165)
+script = ExtResource("1_34lnb")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_egdpj")
+
+[node name="ProximityArea" type="Area2D" parent="."]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ProximityArea"]
+visible = false
+rotation = -0.0996411
+shape = SubResource("CircleShape2D_1b7sg")
+
+[node name="InteractionArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+position = Vector2(-1, 1)
+rotation = -1.24636
+shape = SubResource("CapsuleShape2D_qxojq")
+
+[connection signal="body_entered" from="ProximityArea" to="." method="_on_proximity_area_body_entered"]
+[connection signal="body_exited" from="ProximityArea" to="." method="_on_proximity_area_body_exited"]
+[connection signal="input_event" from="InteractionArea" to="." method="_on_interaction_area_input_event"]
+[connection signal="mouse_entered" from="InteractionArea" to="." method="_on_interaction_area_mouse_entered"]
+[connection signal="mouse_exited" from="InteractionArea" to="." method="_on_interaction_area_mouse_exited"]

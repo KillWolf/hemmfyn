@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://beek14dpi40in"]
 
-[ext_resource type="Script" path="res://inventory/slot_gui.gd" id="1_aac5t"]
+[ext_resource type="Script" uid="uid://bouxagb283w0h" path="res://inventory/slot_gui.gd" id="1_aac5t"]
 
 [node name="Slot" type="Button"]
 self_modulate = Color(1, 1, 1, 0)

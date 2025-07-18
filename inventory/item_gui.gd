@@ -19,4 +19,3 @@ func update():
 		var new_shape = CircleShape2D.new()
 		new_shape.radius = itemSprite.texture.get_size().x
 		collisionShape.shape = new_shape
-

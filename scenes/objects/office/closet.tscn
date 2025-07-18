@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://b4vj3pokpdh34"]
+
+[ext_resource type="Script" uid="uid://cne6dbtpvwasb" path="res://scenes/objects/office/closet.gd" id="1_heskt"]
+[ext_resource type="Texture2D" uid="uid://yf7uew7jh5ri" path="res://graphics/objects/office/closet.png" id="1_vm608"]
+[ext_resource type="Texture2D" uid="uid://dy3pqigpdfrkl" path="res://graphics/objects/office/closet_left_open.png" id="3_37by8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_heskt"]
+size = Vector2(237.866, 338.202)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_37by8"]
+radius = 421.005
+
+[node name="Closet" type="Node2D"]
+script = ExtResource("1_heskt")
+
+[node name="Closed" type="Sprite2D" parent="."]
+texture = ExtResource("1_vm608")
+
+[node name="Open" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-64, 0)
+texture = ExtResource("3_37by8")
+
+[node name="InteractionArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+position = Vector2(-32, -12)
+rotation = 0.0785739
+shape = SubResource("RectangleShape2D_heskt")
+
+[node name="ProximityArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ProximityArea"]
+position = Vector2(-37, 159)
+shape = SubResource("CircleShape2D_37by8")
+
+[connection signal="input_event" from="InteractionArea" to="." method="_on_interaction_area_input_event"]
+[connection signal="mouse_entered" from="InteractionArea" to="." method="_on_interaction_area_mouse_entered"]
+[connection signal="mouse_exited" from="InteractionArea" to="." method="_on_interaction_area_mouse_exited"]
+[connection signal="body_entered" from="ProximityArea" to="." method="_on_proximity_area_body_entered"]
+[connection signal="body_exited" from="ProximityArea" to="." method="_on_proximity_area_body_exited"]

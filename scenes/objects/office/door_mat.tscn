@@ -1,32 +1,35 @@
-[gd_scene load_steps=4 format=3 uid="uid://e03aogkfywgs"]
+[gd_scene load_steps=5 format=3 uid="uid://e03aogkfywgs"]
 
-[ext_resource type="Script" path="res://scenes/objects/office/door_mat.gd" id="1_2bgl0"]
+[ext_resource type="Script" uid="uid://by1jahd5luio7" path="res://scenes/objects/office/door_mat.gd" id="1_2bgl0"]
 [ext_resource type="Texture2D" uid="uid://brypen1dmhnvr" path="res://graphics/objects/office/door_mat.png" id="1_8qfu8"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_62dfe"]
-radius = 195.0
-height = 402.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ovkkd"]
+radius = 46.7408
+height = 267.573
 
-[node name="DoorMat" type="Control"]
-layout_mode = 3
-anchors_preset = 0
+[sub_resource type="CircleShape2D" id="CircleShape2D_2d8x4"]
+radius = 218.147
+
+[node name="DoorMat" type="Node2D"]
 script = ExtResource("1_2bgl0")
 
-[node name="TextureRect" type="TextureRect" parent="."]
-offset_right = 300.0
-offset_bottom = 136.0
-mouse_filter = 2
-mouse_default_cursor_shape = 2
+[node name="TextureRect" type="Sprite2D" parent="."]
 texture = ExtResource("1_8qfu8")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="InteractionArea" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(158, 65)
-shape = SubResource("CapsuleShape2D_62dfe")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+position = Vector2(-5, -5)
+rotation = 1.34331
+shape = SubResource("CapsuleShape2D_ovkkd")
 
-[connection signal="gui_input" from="." to="." method="_on_gui_input"]
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
-[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
-[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]
+[node name="ProximityArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ProximityArea"]
+shape = SubResource("CircleShape2D_2d8x4")
+
+[connection signal="input_event" from="InteractionArea" to="." method="_on_interaction_area_input_event"]
+[connection signal="mouse_entered" from="InteractionArea" to="." method="_on_interaction_area_mouse_entered"]
+[connection signal="mouse_exited" from="InteractionArea" to="." method="_on_interaction_area_mouse_exited"]
+[connection signal="body_entered" from="ProximityArea" to="." method="_on_proximity_area_body_entered"]
+[connection signal="body_exited" from="ProximityArea" to="." method="_on_proximity_area_body_exited"]

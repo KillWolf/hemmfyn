@@ -1,0 +1,73 @@
+[gd_scene load_steps=2 format=3 uid="uid://2n56cfer7d3o"]
+
+[ext_resource type="Script" uid="uid://dpycdbpeh5qip" path="res://scenes/ui/notes/note_popups.gd" id="1_pngaa"]
+
+[node name="NotePopups" type="PopupPanel"]
+initial_position = 1
+size = Vector2i(500, 700)
+visible = true
+script = ExtResource("1_pngaa")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 496.0
+offset_bottom = 696.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.913725, 0.831373, 0.717647, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.00137, 0.99814)
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 29
+theme_override_constants/margin_right = 20
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/MarginContainer"]
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Kære Hr. Klapper Jørgen, 
+
+Vi håber dette brev finder dem vel. 
+
+Deres mange bedrifter er kendt nær og fjernt, også her på Fyns Hoved, og derfor rækker vi ud til Dem for at få Deres hjælp.
+
+Fyns Hoved Færgeforbindelse har oplevet en række uheld, både til materiale men også personer. 
+
+Vi har længe troet, at det var den slags uheld der normalt sker på en byggeplads, men vi er også begyndt at mangle materiale. Vi har endnu ingen idé om, hvem der kunne tage det, da vi har vagter og kameraer ved alle udgange, og der er ikke blevet set noget. Det er som om vi har et spøgelse. Neeeej, ikke et spøgelse!
+
+Vær venlig at komme og hjælpe mig!
+
+Det bedste hilsner
+Sebastian Goodenmejer (Færgelejets pengemand)
+
+P.S.
+HJÆÆÆÆÆLP!
+"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="Control/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+text = "X"

@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dnm3p0afri7ex"]
 
-[ext_resource type="Script" path="res://scenes/cutscene/intro_cutscene.gd" id="1_6esyt"]
+[ext_resource type="Script" uid="uid://dmm62ek6f7dtv" path="res://scenes/cutscene/intro_cutscene.gd" id="1_6esyt"]
 [ext_resource type="Texture2D" uid="uid://doqsplb2gk5xh" path="res://graphics/levels/cutscene_1/måge.png" id="1_o10fh"]
 [ext_resource type="AudioStream" uid="uid://ca34n3tp45tir" path="res://assets/music/main_theme.mp3" id="3_acp7r"]
 

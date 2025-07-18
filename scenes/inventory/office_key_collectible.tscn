@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://dtsfg2na1cud0"]
 
-[ext_resource type="Script" path="res://scenes/inventory/office_key_collectible.gd" id="1_thnt4"]
+[ext_resource type="Script" uid="uid://bdyf3mncj1y8r" path="res://scenes/inventory/office_key_collectible.gd" id="1_thnt4"]
 [ext_resource type="Texture2D" uid="uid://bv8218tdcnpit" path="res://graphics/objects/office/key.png" id="3_uvgkk"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_b3gmo"]

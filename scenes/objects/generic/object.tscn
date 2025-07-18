@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://c6c52ptfmuek6"]
 
-[ext_resource type="Script" path="res://scenes/objects/generic/object.gd" id="1_al40u"]
-[ext_resource type="PackedScene" uid="uid://8wo0d8m2ppcc" path="res://scenes/ui/dialog_area.tscn" id="2_rdhsq"]
+[ext_resource type="Script" uid="uid://bthce4phfclnq" path="res://scenes/objects/generic/object.gd" id="1_al40u"]
+[ext_resource type="PackedScene" uid="uid://8wo0d8m2ppcc" path="res://scenes/ui/dialogue/dialogue_area.tscn" id="2_rdhsq"]
 
 [node name="ObjectContainer" type="Node2D"]
 

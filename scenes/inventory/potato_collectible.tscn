@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://5omj5vg27jtk"]
 
-[ext_resource type="Script" path="res://scenes/inventory/potato_collectible.gd" id="1_ymghi"]
+[ext_resource type="Script" uid="uid://drfb2u0iqp6rw" path="res://scenes/inventory/potato_collectible.gd" id="1_ymghi"]
 [ext_resource type="Texture2D" uid="uid://dxrrk7raglyt" path="res://graphics/inventory_items/potato.png" id="2_c2jjd"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_b3gmo"]

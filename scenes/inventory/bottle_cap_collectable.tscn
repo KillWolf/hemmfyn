@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://ylapla2dmcm1"]
 
-[ext_resource type="Script" path="res://scenes/inventory/bottle_cap_collectable.gd" id="1_dxxgp"]
+[ext_resource type="Script" uid="uid://du5hetwliydww" path="res://scenes/inventory/bottle_cap_collectable.gd" id="1_dxxgp"]
 [ext_resource type="Texture2D" uid="uid://b5w3dj2ngy6ba" path="res://graphics/inventory_items/bottle-cap.png" id="2_at8o8"]
 [ext_resource type="Resource" uid="uid://dldrvojmn1k2a" path="res://inventory/items/bottle_cap.tres" id="2_ergjd"]
 

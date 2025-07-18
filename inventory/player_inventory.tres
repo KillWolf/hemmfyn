@@ -1,7 +1,8 @@
-[gd_resource type="Resource" script_class="Inventory" load_steps=2 format=3 uid="uid://ulpqs8ay3w65"]
+[gd_resource type="Resource" script_class="Inventory" load_steps=3 format=3 uid="uid://ulpqs8ay3w65"]
 
-[ext_resource type="Script" path="res://inventory/inventory.gd" id="1_5fnpu"]
+[ext_resource type="Script" uid="uid://cgej6raen4ure" path="res://inventory/inventory.gd" id="1_5fnpu"]
+[ext_resource type="Script" uid="uid://cnbp04u2oggip" path="res://inventory/inventory_item.gd" id="1_fhgtu"]
 
 [resource]
 script = ExtResource("1_5fnpu")
-items = Array[Resource("res://inventory/inventory_item.gd")]([null, null, null, null, null, null, null, null, null, null])
+items = Array[ExtResource("1_fhgtu")]([null, null, null, null, null, null, null, null, null, null])

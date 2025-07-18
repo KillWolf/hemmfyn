@@ -38,4 +38,3 @@ func transformItem(inventory_item: InventoryItem, item_path_to: String):
 	items[oldIndex] = newItem
 
 	Signalbus.updated.emit()
-

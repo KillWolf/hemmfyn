@@ -1,0 +1,41 @@
+[gd_scene load_steps=4 format=3 uid="uid://dfqmivt2uj10"]
+
+[ext_resource type="Script" uid="uid://dyhbx63otfgka" path="res://scenes/ui/dialogue/dialogue.gd" id="1_5d4fx"]
+
+[sub_resource type="Gradient" id="Gradient_67co7"]
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_dlejw"]
+gradient = SubResource("Gradient_67co7")
+
+[node name="Dialogue" type="CanvasLayer"]
+script = ExtResource("1_5d4fx")
+
+[node name="Background" type="TextureRect" parent="."]
+offset_left = 1.0
+offset_top = 769.0
+offset_right = 1917.0
+offset_bottom = 1079.0
+texture = SubResource("GradientTexture1D_dlejw")
+
+[node name="DialogueText" type="Label" parent="Background"]
+light_mask = 0
+visibility_layer = 2
+layout_mode = 0
+offset_left = 60.0
+offset_top = 41.0
+offset_right = 1861.0
+offset_bottom = 272.0
+theme_override_font_sizes/font_size = 49
+autowrap_mode = 3
+
+[node name="Button" type="Button" parent="Background"]
+layout_mode = 0
+offset_left = 1784.0
+offset_top = 221.0
+offset_right = 1870.0
+offset_bottom = 264.0
+theme_override_font_sizes/font_size = 25
+text = "Luk"
+
+[connection signal="pressed" from="Background/Button" to="." method="_on_button_pressed"]

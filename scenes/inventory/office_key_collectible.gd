@@ -9,7 +9,6 @@ var is_hovering: bool = false
 func _on_area_2d_input_event(_viewport, event, _shape_idx):
 	if allow_hover && event.is_action_pressed("left_click"):
 		Signalbus.collect_item.emit(item)
-		#Signalbus.tutorial_started.emit()
 		self.queue_free()
 
 func _on_area_entered_body_entered(body):

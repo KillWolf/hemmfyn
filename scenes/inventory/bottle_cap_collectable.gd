@@ -26,7 +26,8 @@ func _on_interactable_area_mouse_exited():
 	is_hovering = false
 
 func _process(_delta):
-	if is_hovering && allow_hover:
-		textureRect.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
-	else:
-		textureRect.mouse_default_cursor_shape = Control.CURSOR_ARROW
+	pass
+	#if is_hovering && allow_hover:
+		#textureRect.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
+	#else:
+		#textureRect.mouse_default_cursor_shape = Control.CURSOR_ARROW

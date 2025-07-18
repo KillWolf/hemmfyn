@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="InventoryItem" load_steps=3 format=3 uid="uid://dldrvojmn1k2a"]
 
-[ext_resource type="Script" path="res://inventory/inventory_item.gd" id="1_ov023"]
+[ext_resource type="Script" uid="uid://cnbp04u2oggip" path="res://inventory/inventory_item.gd" id="1_ov023"]
 [ext_resource type="Texture2D" uid="uid://b5w3dj2ngy6ba" path="res://graphics/inventory_items/bottle-cap.png" id="2_baubt"]
 
 [resource]

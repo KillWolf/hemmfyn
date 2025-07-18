@@ -1,0 +1,73 @@
+[gd_scene load_steps=3 format=3 uid="uid://yc775rkorp0"]
+
+[ext_resource type="Script" uid="uid://bkug6k32d354e" path="res://scenes/ui/menu/menu.gd" id="1_q18yf"]
+[ext_resource type="Theme" uid="uid://cne7ss8prwe3o" path="res://scenes/ui/menu/resources/text_theme.tres" id="2_ldhvw"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_q18yf")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.74902, 0.647059, 0.541176, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -366.0
+offset_right = 366.0
+offset_bottom = 87.0
+grow_horizontal = 2
+theme = ExtResource("2_ldhvw")
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 20
+
+[node name="Label" type="Label" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+text = "Hemmeligheden på Fyns Hoved"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -124.0
+offset_top = -106.0
+offset_right = 122.0
+offset_bottom = 106.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_ldhvw")
+
+[node name="Continue" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Continue"
+
+[node name="NewGame" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Begin new game"
+
+[node name="Load" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Load"
+
+[node name="Quit" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Quit"

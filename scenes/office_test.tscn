@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://bu4rx1ctl4mfa"]
+
+[ext_resource type="Script" uid="uid://cl07k1ooj2nwa" path="res://scenes/office_test.gd" id="1_1e2qo"]
+[ext_resource type="Texture2D" uid="uid://dm7xu1j3ny4cm" path="res://graphics/objects/office/kontor.png" id="1_y4td7"]
+[ext_resource type="PackedScene" uid="uid://e03aogkfywgs" path="res://scenes/objects/office/door_mat.tscn" id="2_sydbk"]
+[ext_resource type="PackedScene" uid="uid://d4intpnsgsfx0" path="res://scenes/player/player.tscn" id="3_1e2qo"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_03yun"]
+vertices = PackedVector2Array(1575, 1049, 1608, 1062, 1499, 1062, 1207, 833, 1588, 949, 1549, 997, 795, 1066, 433, 1020, 288, 807, 372, 752, 904, 638, 1020, 681, 1021, 682, 433, 1064, 1210, 733, 369, 682, 774, 548, 858, 575, 889, 595)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2), PackedInt32Array(3, 4, 5), PackedInt32Array(3, 5, 0, 2, 6), PackedInt32Array(6, 7, 8, 9, 10, 11, 12), PackedInt32Array(6, 13, 7), PackedInt32Array(12, 14, 3, 6), PackedInt32Array(10, 9, 15, 16, 17, 18)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(861, 565, 897, 589, 912, 630, 1024, 672, 1221, 725, 1217, 826, 1606, 944, 1561, 998, 1582, 1041, 1660, 1073, 1499, 1072, 795, 1076, 424, 1074, 423, 1023, 275, 805, 362, 747, 359, 676, 776, 538)])
+source_geometry_group_name = &"navigation_polygon_source_group"
+
+[node name="OfficeTest" type="Node2D"]
+script = ExtResource("1_1e2qo")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("1_y4td7")
+
+[node name="Boundaries" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Boundaries"]
+polygon = PackedVector2Array(66, 1068, 1500, 1067, 1506, 936, 1611, 960, 1811, 1018, 1871, 760, 1937, 706, 1955, 1144, -29, 1129, -43, 1058)
+
+[node name="Floor" type="Area2D" parent="Boundaries"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Boundaries/Floor"]
+polygon = PackedVector2Array(292, 809, 402, 765, 378, 677, 558, 616, 775, 546, 861, 572, 886, 594, 1026, 682, 1212, 737, 1207, 836, 1579, 954, 1558, 986, 1571, 1043, 1605, 1059, 1494, 1060, 430, 1063, 433, 1019)
+one_way_collision = true
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="Boundaries"]
+navigation_polygon = SubResource("NavigationPolygon_03yun")
+
+[node name="DoorMat" parent="." instance=ExtResource("2_sydbk")]
+position = Vector2(558, 681)
+
+[node name="Player" parent="." instance=ExtResource("3_1e2qo")]
+position = Vector2(470, 944)

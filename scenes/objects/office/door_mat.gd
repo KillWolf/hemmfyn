@@ -1,42 +1,51 @@
-extends Control
+extends Node2D
 
+# Conditions
+@onready var allow_hover : bool = false
+@onready var is_hovering : bool = false
+
+# Positions
 @onready var initial_position: Vector2 = position
-@onready var moved_postion: Vector2 = Vector2(576, 554)
-@onready var textureRect: TextureRect = $TextureRect
-@onready var allow_hover: bool = false
-@onready var is_hovering: bool = false
+@onready var moved_postion: Vector2 = Vector2(position.x + 20, position.y - 40)
 
-func _on_gui_input(event):
-	if (event is InputEventMouseButton
-		and event.is_action_pressed("left_click")
-		and is_hovering
-		and allow_hover):
-			if position == initial_position:
-				position = moved_postion
-			else:
-				position = initial_position
-			accept_event()
+# Collectible
+#@onready var office_key : Node2D = $office_key_collectible
+
+func _ready():
+	pass
+	#office_key.visible = false
+
+func _on_interaction_area_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
+	if (event is InputEventMouseButton and event.pressed && allow_hover && is_hovering):
+		if position == initial_position:
+			position = moved_postion
+		#	office_key.visible = false
+			_update_cursor()
+		else:
+			position = initial_position
+		#	office_key.visible = false
+			_update_cursor()
+		get_viewport().set_input_as_handled()
 
 
-func _on_area_2d_body_entered(body):
-	if body is CharacterBody2D:
-		allow_hover = true
-
-func _on_area_2d_body_exited(body):
-	if body is CharacterBody2D:
-		allow_hover = false
-
-func _on_area_2d_mouse_entered():
+func _on_interaction_area_mouse_entered() -> void:
 	is_hovering = true
+	_update_cursor()
 
-func _on_area_2d_mouse_exited():
+func _on_interaction_area_mouse_exited() -> void:
 	is_hovering = false
+	_update_cursor()
 
-func _process(_delta):
+func _on_proximity_area_body_entered(_body: Node2D) -> void:
+	allow_hover = true
+	_update_cursor()
+
+func _on_proximity_area_body_exited(_body: Node2D) -> void:
+	allow_hover = false
+	_update_cursor()
+
+func _update_cursor():
 	if is_hovering && allow_hover:
-		textureRect.mouse_filter = Control.MOUSE_FILTER_PASS
-		textureRect.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
+		Input.set_default_cursor_shape(Input.CURSOR_POINTING_HAND)
 	else:
-		textureRect.mouse_filter = Control.MOUSE_FILTER_IGNORE
-		textureRect.mouse_default_cursor_shape = Control.CURSOR_ARROW
-
+		Input.set_default_cursor_shape(Input.CURSOR_ARROW)
